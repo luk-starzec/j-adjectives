@@ -1,0 +1,115 @@
+[
+    {
+        "id": "muzukashii",
+        "type": "i",
+        "kanji": "難しい",
+        "furigana": "むずか",
+        "hiragana": "むずかしい",
+        "romaji": "muzukashii",
+        "eng": "difficult"
+    },
+    {
+        "id": "kantan",
+        "type": "na",
+        "kanji": "簡単",
+        "furigana": "かん|たん",
+        "hiragana": "かんたん",
+        "romaji": "kantan",
+        "eng": "easy"
+    },
+    {
+        "id": "yasashi",
+        "type": "i",
+        "hiragana": "やさしいやさしい",
+        "romaji": "yasashii",
+        "eng": "easy"
+    },
+    {
+        "id": "ii",
+        "type": "i",
+        "kanji": "良い",
+        "furigana": "よ",
+        "hiragana": "いい/よい",
+        "romaji": "ii/yoi",
+        "eng": "good"
+    },
+    {
+        "id": "warui",
+        "type": "i",
+        "kanji": "悪い",
+        "furigana": "わる",
+        "hiragana": "わるい",
+        "romaji": "warui",
+        "eng": "bad"
+    },
+    {
+        "id": "futoi",
+        "type": "i",
+        "kanji": "太い",
+        "furigana": "ふとい",
+        "hiragana": "ふとい",
+        "romaji": "futoi",
+        "eng": "fat"
+    },
+    {
+        "id": "hosoi",
+        "type": "i",
+        "kanji": "細い",
+        "furigana": "ほそ",
+        "hiragana": "ほそい",
+        "romaji": "hosoi",
+        "eng": "thin"
+    },
+    {
+        "id": "ippai",
+        "type": "i",
+        "hiragana": "いっぱい",
+        "romaji": "ippai",
+        "eng": "full"
+    },
+    {
+        "id": "karano",
+        "type": "i",
+        "kanji": "空の",
+        "furigana": "から",
+        "hiragana": "からの",
+        "romaji": "karano",
+        "eng": "empty"
+    },
+    {
+        "id": "atsui",
+        "type": "i",
+        "kanji": "暑い",
+        "furigana": "あつ",
+        "hiragana": "あつい",
+        "romaji": "atsui",
+        "eng": "hot"
+    },
+    {
+        "id": "samui",
+        "type": "i",
+        "kanji": "寒い",
+        "furigana": "さむ",
+        "hiragana": "さむい",
+        "romaji": "samui",
+        "eng": "cold"
+    },
+    {
+        "id": "shiawase",
+        "type": "na",
+        "kanji": "幸せ",
+        "furigana": "しあわ",
+        "hiragana": "しあわせ",
+        "romaji": "shiawase",
+        "eng": "happy"
+    },
+    {
+        "id": "fukou",
+        "type": "na",
+        "kanji": "不幸",
+        "furigana": "ふ|こう",
+        "hiragana": "ふこう",
+        "romaji": "fukou",
+        "eng": "sad"
+    }
+]
