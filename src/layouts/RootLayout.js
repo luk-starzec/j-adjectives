@@ -7,7 +7,7 @@ export default function RootLayout() {
             <ScrollRestoration />
             <header>
                 <nav>
-                    <img src="../logo192.png" className="logo" alt="logo" />
+                    <img src="../logo.svg" className="logo" alt="logo" />
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="opposite">Opposite</NavLink>
                     <NavLink to="quiz">Quiz</NavLink>

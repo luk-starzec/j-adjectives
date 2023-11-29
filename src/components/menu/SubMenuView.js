@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllViewOptions, CARDS_VIEW, TABLE_VIEW } from '../../../enums/viewOptions';
+import { AllViewOptions, CARDS_VIEW, TABLE_VIEW } from '../../enums/viewOptions';
 import MenuButton from "./MenuButton";
 
 export default function SubMenuView({ option, optionChanged }) {

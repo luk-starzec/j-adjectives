@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
   --primary: #bc4123;
@@ -10,8 +10,13 @@
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 1.25rem 1rem 0 1rem;
   font-family: "Poppins";
+}
+
+button {
+  font-family: "Poppins";
+  font-size: 1em;
 }
 
 * {
@@ -38,6 +43,11 @@ header nav a {
   text-decoration: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+header nav a:hover:not(.active) {
+  border: 1px solid #fff;
 }
 
 header nav a.active {
@@ -47,21 +57,30 @@ header nav a.active {
 main {
   position: relative;
   max-width: 1200px;
-  margin: 1rem auto;
+  margin: 0rem auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 2rem - 5rem - 3rem - 2rem);
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  z-index: -1;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 30vh;
+}
+
+.not-found-page a {
+  color: var(--accent);
 }
 
 .menu {
-  position: absolute;
-  top: 0;
+  position: fixed;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -69,15 +88,30 @@ footer {
   gap: 1rem;
 }
 
+.menu * {
+  z-index: 100;
+}
+
+.menu .mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: color-mix(in srgb, var(--secondary) 60%, transparent);
+  z-index: 10;
+}
+
 .menu-button {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
   border: none;
   padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
   background: var(--accent);
   cursor: pointer;
-  font-family: "Poppins";
   color: var(--black);
 }
 
@@ -107,6 +141,11 @@ footer {
 .menu-button:hover .expander,
 .menu-button .visible {
   display: block;
+  font-weight: 600;
+}
+
+.menu-button:hover {
+  font-weight: 600;
 }
 
 .submenu {
@@ -115,7 +154,7 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
-  background: color-mix(in srgb, var(--accent) 25%, var(--secondary));
+  background: color-mix(in srgb, var(--accent) 30%, #fff);
 }
 
 .submenu ul {
@@ -133,13 +172,21 @@ footer {
 .submenu label {
   padding: 0.2rem 0.75rem;
   border-radius: 0.25rem;
+  color: var(--secondary);
   cursor: pointer;
 }
 
-.submenu input:checked+label {
-  background: color-mix(in srgb, var(--accent) 70%, transparent);
+.submenu label:hover {
+  font-weight: 600;
 }
 
+.submenu input:checked+label {
+  background: var(--accent);
+}
+
+.submenu input:checked+label:hover {
+  font-weight: 600;
+}
 
 .table-view {
   display: flex;
@@ -147,8 +194,12 @@ footer {
 }
 
 .table-view table {
-  border-collapse: collapse;
   background: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
 }
 
 .table-view thead {
@@ -156,50 +207,66 @@ footer {
 }
 
 .table-view th {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--primary);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
 }
 
 .table-view td {
   padding: 0.5rem 1rem;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  ;
+}
+
+.table-view td:first-child {
+  border-left: none;
+}
+
+.table-view td:last-child {
+  border-right: none;
+}
+
+.table-view tr:last-child td {
+  border-bottom: none;
 }
 
 .table-view td.kanji {
   font-size: 1.5em;
 }
 
+.table-view td.hiragana {
+  font-size: 1.3em;
+}
+
 .cards-view {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  padding: 0 4rem;
+  padding: 0rem 4rem;
 }
 
-.cards-view .card {
+.card {
   display: flex;
   flex-direction: column;
-  min-width: 15rem;
+  min-width: 17rem;
   min-height: 10rem;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
-.cards-view .card .header {
+.card .header {
   display: flex;
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 1rem;
   background: var(--primary);
 }
 
-.cards-view .card .header .eng {
+.card .header .eng {
   flex-grow: 1;
 }
 
-.cards-view .card .body {
+.card .body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,6 +276,39 @@ footer {
   padding: 1.25rem;
 }
 
-.cards-view .card .body .large {
+.card .body .large {
   font-size: 1.5em;
+}
+
+.card .body .hiragana {
+  font-size: 1.3em;
+}
+
+.opposite-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.opposite-view .opposite-pair {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.opposite-view .separator {
+  align-self: center;
+  font-size: 2rem;
+  opacity: 0.2;
+}
+
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  height: 50vh;
 }

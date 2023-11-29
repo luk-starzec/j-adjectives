@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { renderKanjiWithFurigana } from "../../helpers/kanjiHelper"
-import { AllDataTypes, getTypeLabel } from "../../enums/typeOption";
-import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../../enums/kanaOptions";
+import { renderKanjiWithFurigana } from "../helpers/kanjiHelper"
+import { AllDataTypes, getTypeLabel } from "../enums/typeOption";
+import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../enums/kanaOptions";
 
 export default function Card({ item, options }) {
 

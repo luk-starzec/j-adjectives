@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { AllViewOptions } from "../../../enums/viewOptions";
-import { AllTypeOptions } from "../../../enums/typeOption";
-import { AllKanaOptions } from "../../../enums/kanaOptions";
-import SubMenuView from "./SubMenuView";
-import SubMenuType from "./SubMenuType";
-import SubMenuKana from "./SubMenuKana";
-import MenuButton from "./MenuButton";
+import { AllViewOptions } from "../../enums/viewOptions";
+import { AllTypeOptions } from "../../enums/typeOption";
+import { AllKanaOptions } from "../../enums/kanaOptions";
+import SubMenuView from "../menu/SubMenuView";
+import SubMenuType from "../menu/SubMenuType";
+import SubMenuKana from "../menu/SubMenuKana";
+import MenuButton from "../menu/MenuButton";
 
-export default function Menu(props) {
+export default function HomeMenu(props) {
     const {
         viewOption,
         viewOptionChanged,
@@ -28,12 +28,13 @@ export default function Menu(props) {
                     <SubMenuView option={viewOption} optionChanged={viewOptionChanged} />
                     <SubMenuType options={typeOptions} optionsChanged={typeOptionsChanged} />
                     <SubMenuKana options={kanaOptions} optionsChanged={kanaOptionsChanged} />
+                    <div className="mask" onClick={()=>setIsMenuVisible(false)}></div>
                 </>}
         </div>
     )
 }
 
-Menu.propTypes = {
+HomeMenu.propTypes = {
     viewOption: PropTypes.oneOf(AllViewOptions),
     viewOptionChanged: PropTypes.func.isRequired,
     typeOptions: PropTypes.arrayOf(PropTypes.oneOf(AllTypeOptions)),

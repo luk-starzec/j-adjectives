@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../../../enums/kanaOptions";
+import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../../enums/kanaOptions";
 import MenuButton from "./MenuButton";
 
 export default function SubMenuKana({ options, optionsChanged }) {

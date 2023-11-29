@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllTypeOptions, I_TYPE, NA_TYPE } from "../../../enums/typeOption";
+import { AllTypeOptions, I_TYPE, NA_TYPE } from "../../enums/typeOption";
 import MenuButton from "./MenuButton";
 
 export default function SubMenuType({ options, optionsChanged }) {

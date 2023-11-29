@@ -1,9 +1,9 @@
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
 import { fetchAdjectives, filterAdjectives } from "../helpers/dataHelper"
 import TableView from "../components/home/TableView";
 import CardsView from "../components/home/CardsView";
-import Menu from "../components/home/menu/Menu";
-import { useState } from "react";
+import HomeMenu from "../components/home/HomeMenu";
 import { CARDS_VIEW, DefaultViewOption, TABLE_VIEW, } from "../enums/viewOptions";
 import { DefaultTypeOptions } from "../enums/typeOption";
 import { DefaultKanaOptions } from "../enums/kanaOptions";
@@ -35,7 +35,7 @@ export default function Home() {
 
     return (
         <div className="home-page">
-            <Menu viewOption={viewOption}
+            <HomeMenu viewOption={viewOption}
                 viewOptionChanged={handleViewChanged}
                 typeOptions={typeOptions}
                 typeOptionsChanged={handleTypeChanged}
