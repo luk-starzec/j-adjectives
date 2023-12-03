@@ -10,7 +10,7 @@ export default function SubMenuType({ options, optionsChanged }) {
     return (
         <div className='submenu'>
             <MenuButton isExpanded={isExpanded} handleClick={() => setIsExpanded(!isExpanded)}>
-                Type
+                <span>Type</span>
             </MenuButton>
             {isExpanded &&
                 <ul className="type-options">

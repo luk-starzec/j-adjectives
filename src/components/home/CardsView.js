@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import Card from "../Card";
-import { AllDataTypes } from "../../enums/typeOption";
 import { AllKanaOptions } from "../../enums/kanaOptions";
 
 export default function CardsView({ items, options }) {
@@ -12,15 +11,6 @@ export default function CardsView({ items, options }) {
 }
 
 CardsView.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            eng: PropTypes.string.isRequired,
-            type: PropTypes.oneOf(AllDataTypes).isRequired,
-            kanji: PropTypes.string,
-            furigana: PropTypes.string,
-            hiragana: PropTypes.string.isRequired,
-            romaji: PropTypes.string.isRequired
-        })),
+    items: PropTypes.arrayOf(PropTypes.shape(Card.propTypes)),
     options: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions))
 }

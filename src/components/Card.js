@@ -3,7 +3,7 @@ import { renderKanjiWithFurigana } from "../helpers/kanjiHelper"
 import { AllDataTypes, getTypeLabel } from "../enums/typeOption";
 import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../enums/kanaOptions";
 
-export default function Card({ item, options }) {
+export default function Card({ item, options, isQuizMode }) {
 
     const isKanji = item.kanji != null;
     const showKanji = options?.includes(KANJI_VIEW)
@@ -15,7 +15,7 @@ export default function Card({ item, options }) {
 
     return (
         <div className="card">
-            
+
             <div className="header">
                 <span className="eng">
                     {item.eng}
@@ -26,21 +26,26 @@ export default function Card({ item, options }) {
             </div>
 
             <div className="body">
-                {showKanji &&
+                {showKanji && !isQuizMode &&
                     <div className={`kanji ${cssKanji}`}>
                         {isKanji
                             ? renderKanjiWithFurigana(item.kanji, item.furigana, item.id)
                             : item.hiragana}
                     </div>
                 }
-                {showHiragana &&
+                {showHiragana && !isQuizMode &&
                     <div className={`hiragana ${cssHiragana}`}>
                         {isKanji || !showKanji ? item.hiragana : null}
                     </div>
                 }
-                {showRomaji &&
+                {showRomaji && !isQuizMode &&
                     <div className="romaji">
                         {item.romaji}
+                    </div>
+                }
+                {isQuizMode &&
+                    <div className="quiz">
+                        ?
                     </div>
                 }
             </div>
@@ -58,5 +63,6 @@ Card.propTypes = {
         hiragana: PropTypes.string.isRequired,
         romaji: PropTypes.string.isRequired
     }),
-    options: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions))
+    options: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions)),
+    isQuizMode: PropTypes.bool
 }

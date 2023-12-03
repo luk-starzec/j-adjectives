@@ -1,4 +1,6 @@
+import PropTypes from "prop-types";
 import Card from "../Card";
+import { AllKanaOptions } from "../../enums/kanaOptions";
 
 export default function OppositeView({ pairs, options }) {
     return (
@@ -18,4 +20,13 @@ export default function OppositeView({ pairs, options }) {
             ))}
         </div>
     )
+}
+
+OppositeView.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            item1: PropTypes.shape(Card.propTypes.item),
+            item2: PropTypes.shape(Card.propTypes.item),
+        })),
+    options: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions))
 }

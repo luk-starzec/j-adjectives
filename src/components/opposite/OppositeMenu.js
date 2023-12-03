@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import MenuButton from "../menu/MenuButton";
 import SubMenuKana from "../menu/SubMenuKana";
+import { AllKanaOptions } from "../../enums/kanaOptions";
 
 export default function OppositeMenu({ kanaOptions, kanaOptionsChanged }) {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -17,4 +19,9 @@ export default function OppositeMenu({ kanaOptions, kanaOptionsChanged }) {
         </>}
     </div>
   )
+}
+
+OppositeMenu.propTypes = {
+  kanaOptions: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions)),
+  kanaOptionsChanged: PropTypes.func.isRequired
 }

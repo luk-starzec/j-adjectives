@@ -10,7 +10,7 @@ export default function SubMenuKana({ options, optionsChanged }) {
     return (
         <div className='submenu'>
             <MenuButton isExpanded={isExpanded} handleClick={() => setIsExpanded(!isExpanded)}>
-                Kana
+                <span>Kana</span>
             </MenuButton>
             {isExpanded &&
                 <ul className="kana-options">
