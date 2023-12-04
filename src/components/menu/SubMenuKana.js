@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../../enums/kanaOptions";
+import { AllKanaOptions, KanaOptions } from "../../enums/kanaOptions";
 import MenuButton from "./MenuButton";
 
 export default function SubMenuKana({ options, optionsChanged }) {
@@ -15,15 +15,15 @@ export default function SubMenuKana({ options, optionsChanged }) {
             {isExpanded &&
                 <ul className="kana-options">
                     <li>
-                        <input type="checkbox" id={id + '-kanjiCheckbox'} checked={options.includes(KANJI_VIEW)} onChange={() => optionsChanged(KANJI_VIEW)} />
+                        <input type="checkbox" id={id + '-kanjiCheckbox'} checked={options.includes(KanaOptions.KANJI_VIEW)} onChange={() => optionsChanged(KanaOptions.KANJI_VIEW)} />
                         <label htmlFor={id + '-kanjiCheckbox'}>kanji</label>
                     </li>
                     <li>
-                        <input type="checkbox" id={id + '-hiraganaCheckbox'} checked={options.includes(HIRAGANA_VIEW)} onChange={() => optionsChanged(HIRAGANA_VIEW)} />
+                        <input type="checkbox" id={id + '-hiraganaCheckbox'} checked={options.includes(KanaOptions.HIRAGANA_VIEW)} onChange={() => optionsChanged(KanaOptions.HIRAGANA_VIEW)} />
                         <label htmlFor={id + '-hiraganaCheckbox'}>hiragana</label>
                     </li>
                     <li>
-                        <input type="checkbox" id={id + '-romajiCheckbox'} checked={options.includes(ROMAJI_VIEW)} onChange={() => optionsChanged(ROMAJI_VIEW)} />
+                        <input type="checkbox" id={id + '-romajiCheckbox'} checked={options.includes(KanaOptions.ROMAJI_VIEW)} onChange={() => optionsChanged(KanaOptions.ROMAJI_VIEW)} />
                         <label htmlFor={id + '-romajiCheckbox'}>romaji</label>
                     </li>
                 </ul>

@@ -4,7 +4,7 @@ import { fetchAdjectives, filterAdjectives } from "../helpers/dataHelper"
 import TableView from "../components/home/TableView";
 import CardsView from "../components/home/CardsView";
 import HomeMenu from "../components/home/HomeMenu";
-import { CARDS_VIEW, DefaultViewOption, TABLE_VIEW, } from "../enums/viewOptions";
+import { DefaultViewOption, ViewOptions, } from "../enums/viewOptions";
 import { DefaultTypeOptions } from "../enums/typeOption";
 import { DefaultKanaOptions } from "../enums/kanaOptions";
 
@@ -15,18 +15,15 @@ export default function Home() {
     const [kanaOptions, setKanaOptions] = useState(DefaultKanaOptions)
 
     const handleViewChanged = (option) => {
-        //console.log('handleViewChanged', option)
         setViewOption(option);
     }
 
     const handleTypeChanged = (option) => {
-        //console.log('handleTypeChanged', option)
         const newOptions = typeOptions.includes(option) ? typeOptions.filter(o => o !== option) : [...typeOptions, option];
         setTypeOptions(newOptions);
     }
 
     const handleKanaChanged = (option) => {
-        //console.log('handleKanaChanged', option)
         const newOptions = kanaOptions.includes(option) ? kanaOptions.filter(o => o !== option) : [...kanaOptions, option];
         setKanaOptions(newOptions);
     }
@@ -42,10 +39,10 @@ export default function Home() {
                 kanaOptions={kanaOptions}
                 kanaOptionsChanged={handleKanaChanged}
             />
-            {viewOption === TABLE_VIEW &&
+            {viewOption === ViewOptions.TABLE_VIEW &&
                 <TableView items={items} options={kanaOptions} />
             }
-            {viewOption === CARDS_VIEW &&
+            {viewOption === ViewOptions.CARDS_VIEW &&
                 <CardsView items={items} options={kanaOptions} />
             }
         </div>

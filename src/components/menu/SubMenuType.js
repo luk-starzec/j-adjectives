@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllTypeOptions, I_TYPE, NA_TYPE } from "../../enums/typeOption";
+import { AllTypeOptions, TypeOptions } from "../../enums/typeOption";
 import MenuButton from "./MenuButton";
 
 export default function SubMenuType({ options, optionsChanged }) {
@@ -15,11 +15,11 @@ export default function SubMenuType({ options, optionsChanged }) {
             {isExpanded &&
                 <ul className="type-options">
                     <li>
-                        <input type="checkbox" id={id + '-iCheckbox'} checked={options.includes(I_TYPE)} onChange={() => optionsChanged(I_TYPE)} />
+                        <input type="checkbox" id={id + '-iCheckbox'} checked={options.includes(TypeOptions.I_TYPE)} onChange={() => optionsChanged(TypeOptions.I_TYPE)} />
                         <label htmlFor={id + '-iCheckbox'}>i</label>
                     </li>
                     <li>
-                        <input type="checkbox" id={id + '-naCheckbox'} checked={options.includes(NA_TYPE)} onChange={() => optionsChanged(NA_TYPE)} />
+                        <input type="checkbox" id={id + '-naCheckbox'} checked={options.includes(TypeOptions.NA_TYPE)} onChange={() => optionsChanged(TypeOptions.NA_TYPE)} />
                         <label htmlFor={id + '-naCheckbox'}>na</label>
                     </li>
                 </ul>}

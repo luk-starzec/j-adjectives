@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import { renderKanjiWithFurigana } from "../helpers/kanjiHelper"
 import { AllDataTypes, getTypeLabel } from "../enums/typeOption";
-import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../enums/kanaOptions";
+import { AllKanaOptions, KanaOptions } from "../enums/kanaOptions";
 
 export default function Card({ item, options, isQuizMode }) {
 
     const isKanji = item.kanji != null;
-    const showKanji = options?.includes(KANJI_VIEW)
-    const showHiragana = options?.includes(HIRAGANA_VIEW)
-    const showRomaji = options?.includes(ROMAJI_VIEW)
+    const showKanji = options?.includes(KanaOptions.KANJI_VIEW)
+    const showHiragana = options?.includes(KanaOptions.HIRAGANA_VIEW)
+    const showRomaji = options?.includes(KanaOptions.ROMAJI_VIEW)
 
     const cssKanji = showKanji ? "large" : "";
     const cssHiragana = showKanji ? "" : "large";

@@ -24,7 +24,9 @@ const Actions = {
 
     CARD_SHOW_ANSWER: 'card_show_answer',
     CARD_NEXT: 'card_next',
-    CARD_PREV: 'card_prev'
+    CARD_PREV: 'card_prev',
+
+    SETTINGS_CHANGED: 'settings_chnged'
 }
 
 const ControlActions = {
@@ -33,9 +35,6 @@ const ControlActions = {
     START: 'start',
     RESTART: 'restart'
 }
-
-const questionTime = 5
-const answerTime = 3
 
 function reducer(state, action) {
     switch (action.type) {
@@ -46,7 +45,7 @@ function reducer(state, action) {
                 status: Statuses.INIT,
                 index: 0,
                 isQuestion: true,
-                time: questionTime,
+                time: state.questionTime,
                 controlAction: ControlActions.START
             }
         case Actions.QUIZ_START:
@@ -73,7 +72,7 @@ function reducer(state, action) {
                 ...state,
                 status: isEnd ? Statuses.ENDED : Statuses.ANSWER,
                 isQuestion: false,
-                time: answerTime,
+                time: state.answerTime,
                 nextAction: isEnd ? Actions.TIMER_STOP : null,
                 controlAction: isEnd ? ControlActions.RESTART : state.controlAction
             }
@@ -84,7 +83,7 @@ function reducer(state, action) {
                 ...state,
                 index: state.index < state.itemsCount - 1 ? state.index + 1 : state.index,
                 isQuestion: true,
-                time: questionTime,
+                time: state.questionTime,
                 status: isRunning ? Statuses.QUESTION : Statuses.PAUSED,
                 controlAction: isRunning ? ControlActions.PAUSE : ControlActions.PLAY
             }
@@ -95,7 +94,7 @@ function reducer(state, action) {
                 ...state,
                 index: state.index > 0 ? state.index - 1 : state.index,
                 isQuestion: false,
-                time: answerTime,
+                time: state.answerTime,
                 status: isRunning ? Statuses.ANSWER : Statuses.PAUSED,
                 controlAction: isRunning ? ControlActions.PAUSE : ControlActions.PLAY
             }
@@ -126,6 +125,12 @@ function reducer(state, action) {
                     time: state.time > 1 ? state.time - 1 : 0,
                     nextAction: nextAction
                 }
+            }
+        case Actions.SETTINGS_CHANGED:
+            return {
+                ...state,
+                ...action.payload,
+                time: state.status === Statuses.INIT ? action.payload.questionTime : state.time
             }
         default:
             break;
@@ -175,7 +180,7 @@ function controlActionToLabel(controlAction) {
     }
 }
 
-export default function QuizView({ items, kanaOptions, onRestart }) {
+export default function QuizView({ items, questionTime, answerTime, kanaOptions, onRestart }) {
     const [state, dispatch] = useReducer(reducer, { index: 0, itemsCount: items.length })
     const { index, time, status, isQuestion, itemsCount, nextAction, controlAction } = state
     const leftArrowPressed = useKeyPress('ArrowLeft');
@@ -203,6 +208,10 @@ export default function QuizView({ items, kanaOptions, onRestart }) {
     }, [downArrowPressed])
 
     useEffect(() => {
+        dispatch({ type: Actions.SETTINGS_CHANGED, payload: { questionTime: questionTime, answerTime: answerTime } })
+    }, [questionTime, answerTime])
+
+    useEffect(() => {
         switch (nextAction) {
             case Actions.TIMER_START:
                 const newIntervalId = setInterval(() => {
@@ -228,7 +237,7 @@ export default function QuizView({ items, kanaOptions, onRestart }) {
 
             <div className="time-nav">
                 {status !== Statuses.ENDED &&
-                    <div> {time} s</div>
+                    <span> {time} s</span>
                 }
 
                 <button onClick={() => dispatch({ type: controlActionToReducerAction(controlAction) })} title={controlActionToLabel(controlAction)}>
@@ -267,6 +276,8 @@ export default function QuizView({ items, kanaOptions, onRestart }) {
 
 QuizView.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape(Card.propTypes)),
+    questionTime: PropTypes.number.isRequired,
+    answerTime: PropTypes.number.isRequired,
     kanaOptions: PropTypes.arrayOf(PropTypes.oneOf(AllKanaOptions)),
     onRestart: PropTypes.func.isRequired
 }

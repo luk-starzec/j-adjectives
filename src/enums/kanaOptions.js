@@ -1,6 +1,8 @@
-export const KANJI_VIEW = 'KANJI_VIEW'
-export const HIRAGANA_VIEW = 'HIRAGANA_VIEW'
-export const ROMAJI_VIEW = 'ROMAJI_VIEW'
+export const KanaOptions = {
+    KANJI_VIEW: 'KANJI_VIEW',
+    HIRAGANA_VIEW: 'HIRAGANA_VIEW',
+    ROMAJI_VIEW: 'ROMAJI_VIEW'
+}
 
-export const AllKanaOptions = [KANJI_VIEW, HIRAGANA_VIEW, ROMAJI_VIEW]
+export const AllKanaOptions = [KanaOptions.KANJI_VIEW, KanaOptions.HIRAGANA_VIEW, KanaOptions.ROMAJI_VIEW]
 export const DefaultKanaOptions = AllKanaOptions

@@ -1,29 +1,35 @@
-export const I_TYPE = 'I_TYPE'
-export const NA_TYPE = 'NA_TYPE'
+export const TypeFullOptions = {
+    I_TYPE: {
+        id: 'I_TYPE',
+        dbType: 'i',
+        label: 'い'
+    },
+    NA_TYPE: {
+        id: 'NA_TYPE',
+        dbType: 'na',
+        label: 'な'
+    }
+}
 
-export const I_DATATYPE = 'i'
-export const NA_DATATYPE = 'na'
+export const TypeOptions = {
+    I_TYPE: TypeFullOptions.I_TYPE.id,
+    NA_TYPE: TypeFullOptions.NA_TYPE.id
+}
 
-export const AllTypeOptions = [I_TYPE, NA_TYPE]
+export const AllTypeOptions = [TypeOptions.I_TYPE, TypeOptions.NA_TYPE]
 export const DefaultTypeOptions = AllTypeOptions
-export const AllDataTypes = [I_DATATYPE, NA_DATATYPE]
+export const AllDataTypes = [TypeFullOptions.I_TYPE.dbType, TypeFullOptions.NA_TYPE.dbType]
 
 export const prepareTypeForDataFiltering = (typeOptions) => {
     let result = []
-    if (typeOptions.includes(I_TYPE))
-        result.push('i')
-    if (typeOptions.includes(NA_TYPE))
-        result.push('na')
+    typeOptions.forEach(id => {
+        const fullType = Object.values(TypeFullOptions).find(t => t.id === id);
+        result.push(fullType.dbType);
+    });
     return result
 }
 
-export const getTypeLabel = (adjType) => {
-    switch (adjType) {
-        case I_DATATYPE:
-            return 'い'
-        case NA_DATATYPE:
-            return 'な'
-        default:
-            return ''
-    }
+export const getTypeLabel = (dbType) => {
+    const fullType = Object.values(TypeFullOptions).find(t => t.dbType === dbType);
+    return fullType ? fullType.label : "";
 }

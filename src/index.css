@@ -59,7 +59,7 @@ main {
   position: relative;
   max-width: 1200px;
   margin: 0rem auto;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   min-height: calc(100vh - 2rem - 5rem - 3rem - 2rem);
 }
 
@@ -79,10 +79,17 @@ footer {
 .menu {
   position: fixed;
   right: 0;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: 1rem;
+}
+
+@media screen and (max-height: 420px) {
+  .menu {
+    margin-top: 0;
+  }
 }
 
 .menu * {
@@ -157,8 +164,19 @@ footer {
   list-style: none;
 }
 
-.submenu input {
+.submenu input[type=radio],
+.submenu input[type=checkbox] {
   display: none;
+}
+
+.submenu input[type=number] {
+  width: 2.5rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.submenu .time-options {
+  padding: 0 1rem;
 }
 
 .submenu label {
@@ -289,7 +307,8 @@ footer {
 .opposite-view .opposite-pair {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: min(3vw, 2rem);
   width: 100%;
 }
 
@@ -297,6 +316,22 @@ footer {
   align-self: center;
   font-size: 2rem;
   opacity: 0.2;
+}
+
+@media screen and (max-width: 750px) {
+  .opposite-view {
+    gap: 4rem;
+  }
+
+  .opposite-view .opposite-pair {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .opposite-view .separator {
+    transform: rotate(90deg);
+  }
 }
 
 .quiz-view {
@@ -309,7 +344,6 @@ footer {
     "time-nav visibility-nav visibility-nav"
     ". card  ."
     "item-nav item-nav item-nav";
-  padding: 1rem 0;
 }
 
 .quiz-view .time-nav,
@@ -325,6 +359,10 @@ footer {
   align-items: center;
   justify-content: end;
   gap: 0.75rem;
+}
+
+.quiz-view .time-nav span {
+  min-width: 1.5rem;
 }
 
 .quiz-view .visibility-nav {
@@ -377,4 +415,34 @@ footer {
 .quiz-view .card {
   grid-area: card;
   justify-self: center;
+}
+
+@media screen and (max-height: 780px) {
+  .quiz-view {
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .quiz-view .card {
+    margin-block: 2vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quiz-view {
+    height: 75vh;
+    grid-template-areas:
+      ". . ."
+      "card card card"
+      "time-nav item-nav visibility-nav";
+  }
+
+  .quiz-view .time-nav {
+    justify-content: start;
+    padding-left: 1rem;
+  }
+
+  .quiz-view .visibility-nav {
+    justify-content: end;
+    padding-inline: 0 1rem;
+  }
 }

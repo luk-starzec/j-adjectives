@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useId, useState } from "react";
-import { AllViewOptions, CARDS_VIEW, TABLE_VIEW } from '../../enums/viewOptions';
+import { AllViewOptions, ViewOptions } from '../../enums/viewOptions';
 import MenuButton from "./MenuButton";
 
 export default function SubMenuView({ option, optionChanged }) {
@@ -15,11 +15,11 @@ export default function SubMenuView({ option, optionChanged }) {
             {isExpanded &&
                 <ul>
                     <li>
-                        <input type="radio" id={id + '-tableRadio'} checked={option === TABLE_VIEW} onChange={() => optionChanged(TABLE_VIEW)} />
+                        <input type="radio" id={id + '-tableRadio'} checked={option === ViewOptions.TABLE_VIEW} onChange={() => optionChanged(ViewOptions.TABLE_VIEW)} />
                         <label htmlFor={id + '-tableRadio'}>table</label>
                     </li>
                     <li>
-                        <input type="radio" id={id + '-cardsRadio'} checked={option === CARDS_VIEW} onChange={() => optionChanged(CARDS_VIEW)} />
+                        <input type="radio" id={id + '-cardsRadio'} checked={option === ViewOptions.CARDS_VIEW} onChange={() => optionChanged(ViewOptions.CARDS_VIEW)} />
                         <label htmlFor={id + '-cardsRadio'}>cards</label>
                     </li>
                 </ul>

@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
-import { AllKanaOptions, HIRAGANA_VIEW, KANJI_VIEW, ROMAJI_VIEW } from "../../enums/kanaOptions";
+import { AllKanaOptions, KanaOptions } from "../../enums/kanaOptions";
 import { AllDataTypes, getTypeLabel } from "../../enums/typeOption";
 import { renderKanjiWithFurigana } from "../../helpers/kanjiHelper";
 
 export default function TableView({ items, options }) {
 
-    const showKanji = options?.includes(KANJI_VIEW)
-    const showHiragana = options?.includes(HIRAGANA_VIEW)
-    const showRomaji = options?.includes(ROMAJI_VIEW)
+    const showKanji = options?.includes(KanaOptions.KANJI_VIEW)
+    const showHiragana = options?.includes(KanaOptions.HIRAGANA_VIEW)
+    const showRomaji = options?.includes(KanaOptions.ROMAJI_VIEW)
 
     return (
         <div className="table-view">
