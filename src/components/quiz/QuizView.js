@@ -44,6 +44,7 @@ function reducer(state, action) {
                 ...state,
                 status: Statuses.INIT,
                 index: 0,
+                itemsCount: action.payload > 0 ? action.payload : state.itemsCount,
                 isQuestion: true,
                 time: state.questionTime,
                 controlAction: ControlActions.START
@@ -188,9 +189,13 @@ export default function QuizView({ items, questionTime, answerTime, kanaOptions,
     const downArrowPressed = useKeyPress('ArrowDown');
 
     useEffect(() => {
-        dispatch({ type: Actions.QUIZ_INIT })
         return () => clearInterval(state.intervalId);
     }, []);
+
+    useEffect(() => {
+        dispatch({ type: Actions.TIMER_STOP });
+        dispatch({ type: Actions.QUIZ_INIT, payload: items.length })
+    }, [items]);
 
     useEffect(() => {
         if (index > 0 && leftArrowPressed)
@@ -231,6 +236,9 @@ export default function QuizView({ items, questionTime, answerTime, kanaOptions,
                 break;
         }
     }, [nextAction])
+
+    if (!items || items.length < 1)
+        return <></>
 
     return (
         <div className='quiz-view'>

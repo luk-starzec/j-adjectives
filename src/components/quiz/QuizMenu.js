@@ -4,9 +4,12 @@ import { AllKanaOptions } from "../../enums/kanaOptions";
 import MenuButton from "../menu/MenuButton";
 import SubMenuKana from "../menu/SubMenuKana";
 import SubMenuTime from "../menu/SubMenuTime";
+import SubMenuQuiz from "../menu/SubMenuQuiz";
 
 export default function QuizMenu(props) {
     const {
+        itemsCount,
+        itemsCountChanged,
         questionTime,
         questionTimeChanged,
         answerTime,
@@ -22,14 +25,16 @@ export default function QuizMenu(props) {
             </MenuButton>
             {isMenuVisible &&
                 <>
-                    <SubMenuTime label="Question" time={questionTime} timeChanged={(t) => questionTimeChanged(t)} />
-                    <SubMenuTime label="Answer" time={answerTime} timeChanged={(t) => answerTimeChanged(t)} />
+                    <SubMenuQuiz itemsCount={itemsCount} itemsCountChanged={itemsCountChanged} />
+                    <SubMenuTime label="Question" time={questionTime} timeChanged={questionTimeChanged} />
+                    <SubMenuTime label="Answer" time={answerTime} timeChanged={answerTimeChanged} />
                     <SubMenuKana options={kanaOptions} optionsChanged={kanaOptionsChanged} />
                     <div className="mask" onClick={() => setIsMenuVisible(false)}></div>
                 </>}
         </div>
     )
 }
+
 QuizMenu.propTypes = {
     questionTime: PropTypes.number.isRequired,
     questionTimeChanged: PropTypes.func.isRequired,

@@ -1,18 +1,20 @@
 import { useLoaderData } from "react-router-dom"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { fetchOpposite } from "../helpers/dataHelper";
+import { loadKanaOptions, saveKanaOptions } from "../helpers/contextHelper";
+import { AppContext } from "../AppContext";
 import OppositeView from "../components/opposite/OppositeView";
 import OppositeMenu from "../components/opposite/OppositeMenu";
-import { DefaultKanaOptions } from "../enums/kanaOptions";
 
 export default function Opposite() {
     const pairs = useLoaderData()
-    const [kanaOptions, setKanaOptions] = useState(DefaultKanaOptions)
+    const context = useContext(AppContext);
+    const [kanaOptions, setKanaOptions] = useState(loadKanaOptions(context))
 
     const handleKanaChanged = (option) => {
-        //console.log('handleKanaChanged', option)
         const newOptions = kanaOptions.includes(option) ? kanaOptions.filter(o => o !== option) : [...kanaOptions, option];
         setKanaOptions(newOptions);
+        saveKanaOptions(context, newOptions)
     }
 
     return (
