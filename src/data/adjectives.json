@@ -111,5 +111,131 @@
         "hiragana": "ふこう",
         "romaji": "fukou",
         "eng": "sad"
+    },
+    {
+        "id": "atarashii",
+        "type": "i",
+        "kanji": "新しい",
+        "furigana": "あたら",
+        "hiragana": "あたらしい",
+        "romaji": "atarashii",
+        "eng": "new"
+    },
+    {
+        "id": "frui",
+        "type": "i",
+        "kanji": "古い",
+        "furigana": "ふる",
+        "hiragana": "ふるい",
+        "romaji": "frui",
+        "eng": "old"
+    },
+    {
+        "id": "semai",
+        "type": "i",
+        "kanji": "狭い",
+        "furigana": "せま",
+        "hiragana": "せまい",
+        "romaji": "semai",
+        "eng": "narrow"
+    },
+    {
+        "id": "hiroi",
+        "type": "i",
+        "kanji": "広い",
+        "furigana": "ひろ",
+        "hiragana": "ひろい",
+        "romaji": "hiroi",
+        "eng": "wide"
+    },
+    {
+        "id": "karui",
+        "type": "i",
+        "kanji": "軽い",
+        "furigana": "かる",
+        "hiragana": "かるい",
+        "romaji": "karui",
+        "eng": "light"
+    },
+    {
+        "id": "omoi",
+        "type": "i",
+        "kanji": "重い",
+        "furigana": "おも",
+        "hiragana": "おもい",
+        "romaji": "omoi",
+        "eng": "heavy"
+    },
+    {
+        "id": "ookii",
+        "type": "i",
+        "kanji": "大きい",
+        "furigana": "おお",
+        "hiragana": "おおきい",
+        "romaji": "ookii",
+        "eng": "big"
+    },
+    {
+        "id": "chiisai",
+        "type": "i",
+        "kanji": "小さい",
+        "furigana": "ちい",
+        "hiragana": "ちいさい",
+        "romaji": "chiisai",
+        "eng": "small"
+    },
+    {
+        "id": "ooi",
+        "type": "i",
+        "kanji": "多い",
+        "furigana": "おお",
+        "hiragana": "おおい",
+        "romaji": "ooi",
+        "eng": "many"
+    },
+    {
+        "id": "sukunai",
+        "type": "i",
+        "kanji": "少ない",
+        "furigana": "すく",
+        "hiragana": "すくない",
+        "romaji": "sukunai",
+        "eng": "few"
+    },
+    {
+        "id": "fukai",
+        "type": "i",
+        "kanji": "深い",
+        "furigana": "ふか",
+        "hiragana": "ふかい",
+        "romaji": "fukai",
+        "eng": "deep"
+    },
+    {
+        "id": "asai",
+        "type": "i",
+        "kanji": "浅い",
+        "furigana": "あさい",
+        "hiragana": "あさい",
+        "romaji": "asai",
+        "eng": "shallow"
+    },
+    {
+        "id": "kurai",
+        "type": "i",
+        "kanji": "暗い",
+        "furigana": "くら",
+        "hiragana": "くらい",
+        "romaji": "kurai",
+        "eng": "dark"
+    },
+    {
+        "id": "akarui",
+        "type": "i",
+        "kanji": "明るい",
+        "furigana": "あか",
+        "hiragana": "あかるい",
+        "romaji": "akarui",
+        "eng": "light"
     }
 ]

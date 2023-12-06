@@ -1,6 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AppContext } from './AppContext';
+import { getInitContext, loadSettings, saveSettings } from './helpers/contextHelper';
 
 import RootLayout from './layouts/RootLayout';
 
@@ -24,8 +25,18 @@ function App() {
   const [context, setContext] = useState();
 
   useEffect(() => {
-    setContext({ setContext: setContext })
+    const ctx = getInitContext(updateContext);
+    const settings = loadSettings();
+    setContext({ ...ctx, ...settings });
   }, []);
+
+  const updateContext = (ctx) => {
+    setContext(ctx);
+    saveSettings(ctx)
+  }
+
+  if (!context)
+    return (<div>loading...</div>)
 
   return (
     <AppContext.Provider value={context}>

@@ -26,5 +26,33 @@
     {
         "id1": "shiawase",
         "id2": "fukou"
+    },
+    {
+        "id1": "atarashii",
+        "id2": "frui"
+    },
+    {
+        "id1": "semai",
+        "id2": "hiroi"
+    },
+    {
+        "id1": "karui",
+        "id2": "omoi"
+    },
+    {
+        "id1": "ookii",
+        "id2": "chiisai"
+    },
+    {
+        "id1": "ooi",
+        "id2": "sukunai"
+    },
+    {
+        "id1": "fukai",
+        "id2": "asai"
+    },
+    {
+        "id1": "kurai",
+        "id2": "akarui"
     }
 ]

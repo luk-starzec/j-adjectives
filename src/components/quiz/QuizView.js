@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import PropTypes from "prop-types";
 import { useEffect, useReducer } from "react";
 import { AllKanaOptions } from "../../enums/kanaOptions";
