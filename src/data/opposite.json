@@ -54,5 +54,57 @@
     {
         "id1": "kurai",
         "id2": "akarui"
+    },
+    {
+        "id1": "hikui",
+        "id2": "takai"
+    },
+    {
+        "id1": "yasui",
+        "id2": "takai"
+    },
+    {
+        "id1": "nagai",
+        "id2": "mijikai"
+    },
+    {
+        "id1": "kirei",
+        "id2": "kitanai"
+    },
+    {
+        "id1": "chikai",
+        "id2": "tooi"
+    },
+    {
+        "id1": "hayai",
+        "id2": "osoi"
+    },
+    {
+        "id1": "urusai",
+        "id2": "shizuka"
+    },
+    {
+        "id1": "oishii",
+        "id2": "mazui"
+    },
+    {
+        "id1": "omoshiroi",
+        "id2": "tsumaranai"
+    },
+    {
+        "id1": "benri",
+        "id2": "fuben"
+    },
+    {
+        "id1": "nigai",
+        "id2": "amai"
+    },
+    {
+        "id1": "anzen",
+        "id2": "abunai"
+    },
+    {
+        "id1": "tsuyoi",
+        "id2": "yowai"
     }
 ]

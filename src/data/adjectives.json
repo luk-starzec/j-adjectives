@@ -155,7 +155,7 @@
         "furigana": "かる",
         "hiragana": "かるい",
         "romaji": "karui",
-        "eng": "light"
+        "eng": "light (weight)"
     },
     {
         "id": "omoi",
@@ -237,5 +237,239 @@
         "hiragana": "あかるい",
         "romaji": "akarui",
         "eng": "light"
+    },
+    {
+        "id": "hikui",
+        "type": "i",
+        "kanji": "低い",
+        "furigana": "ひく",
+        "hiragana": "ひくい",
+        "romaji": "hikui",
+        "eng": "short (height)"
+    },
+    {
+        "id": "takai",
+        "type": "i",
+        "kanji": "高い",
+        "furigana": "たか",
+        "hiragana": "たかい",
+        "romaji": "takai",
+        "eng": "tall, expensive"
+    },
+    {
+        "id": "yasui",
+        "type": "i",
+        "kanji": "安い",
+        "furigana": "やす",
+        "hiragana": "やすい",
+        "romaji": "yasui",
+        "eng": "cheap"
+    },
+    {
+        "id": "nagai",
+        "type": "i",
+        "kanji": "長い",
+        "furigana": "なが",
+        "hiragana": "ながい",
+        "romaji": "nagai",
+        "eng": "long"
+    },
+    {
+        "id": "mijikai",
+        "type": "i",
+        "kanji": "短い",
+        "furigana": "みじか",
+        "hiragana": "みじかい",
+        "romaji": "mijikai",
+        "eng": "short"
+    },
+    {
+        "id": "kirei",
+        "type": "na",
+        "kanji": "綺麗",
+        "furigana": "き|れい",
+        "hiragana": "きれい",
+        "romaji": "kirei",
+        "eng": "beautiful, clean"
+    },
+    {
+        "id": "kitanai",
+        "type": "i",
+        "kanji": "汚い",
+        "furigana": "きたな",
+        "hiragana": "きたない",
+        "romaji": "kitanai",
+        "eng": "dirty"
+    },
+    {
+        "id": "chikai",
+        "type": "i",
+        "kanji": "近い",
+        "furigana": "ちか",
+        "hiragana": "ちかい",
+        "romaji": "chikai",
+        "eng": "near"
+    },
+    {
+        "id": "tooi",
+        "type": "i",
+        "kanji": "遠い",
+        "furigana": "とお",
+        "hiragana": "とおい",
+        "romaji": "tooi",
+        "eng": "far"
+    },
+    {
+        "id": "hayai",
+        "type": "i",
+        "kanji": "早い",
+        "furigana": "はや",
+        "hiragana": "はやい",
+        "romaji": "hayai",
+        "eng": "fast, early"
+    },
+    {
+        "id": "osoi",
+        "type": "i",
+        "kanji": "遅い",
+        "furigana": "おそ",
+        "hiragana": "おそい",
+        "romaji": "osoi",
+        "eng": "slow, late"
+    },
+    {
+        "id": "urusai",
+        "type": "i",
+        "kanji": "煩い",
+        "furigana": "うるさ",
+        "hiragana": "うるさい",
+        "romaji": "urusai",
+        "eng": "noisy"
+    },
+    {
+        "id": "shizuka",
+        "type": "na",
+        "kanji": "静か",
+        "furigana": "しず",
+        "hiragana": "しずか",
+        "romaji": "shizuka",
+        "eng": "quiet"
+    },
+    {
+        "id": "oishii",
+        "type": "i",
+        "kanji": "美味しい",
+        "furigana": "お|い",
+        "hiragana": "おいしい",
+        "romaji": "oishii",
+        "eng": "delicious"
+    },
+    {
+        "id": "mazui",
+        "type": "i",
+        "kanji": "不味い",
+        "furigana": "ま|ず",
+        "hiragana": "まずい",
+        "romaji": "mazui",
+        "eng": "bad (taste)"
+    },
+    {
+        "id": "omoshiroi",
+        "type": "i",
+        "kanji": "面白い",
+        "furigana": "おも|しろ",
+        "hiragana": "おもしろい",
+        "romaji": "omoshiroi",
+        "eng": "interesting"
+    },
+    {
+        "id": "tsumaranai",
+        "type": "i",
+        "kanji": "詰らない",
+        "furigana": "つま",
+        "hiragana": "つまらない",
+        "romaji": "tsumaranai",
+        "eng": "boring"
+    },
+    {
+        "id": "benri",
+        "type": "na",
+        "kanji": "便利",
+        "furigana": "べん|り",
+        "hiragana": "べんり",
+        "romaji": "benri",
+        "eng": "convenient"
+    },
+    {
+        "id": "fuben",
+        "type": "na",
+        "kanji": "不便",
+        "furigana": "ふ|べん",
+        "hiragana": "ふべん",
+        "romaji": "fuben",
+        "eng": "inconvenient"
+    },
+    {
+        "id": "nigai",
+        "type": "i",
+        "kanji": "苦い",
+        "furigana": "にが",
+        "hiragana": "にがい",
+        "romaji": "nigai",
+        "eng": "bitter"
+    },
+    {
+        "id": "amai",
+        "type": "i",
+        "kanji": "甘い",
+        "furigana": "あま",
+        "hiragana": "あまい",
+        "romaji": "amai",
+        "eng": "sweet"
+    },
+    {
+        "id": "tadashii",
+        "type": "i",
+        "kanji": "正しい",
+        "furigana": "ただ",
+        "hiragana": "ただしい",
+        "romaji": "tadashii",
+        "eng": "correct"
+    },
+    {
+        "id": "anzen",
+        "type": "na",
+        "kanji": "安全",
+        "furigana": "あん|ぜん",
+        "hiragana": "あんぜん",
+        "romaji": "anzen",
+        "eng": "safe"
+    },
+    {
+        "id": "abunai",
+        "type": "i",
+        "kanji": "危ない",
+        "furigana": "あぶ",
+        "hiragana": "あぶない",
+        "romaji": "abunai",
+        "eng": "dangerous"
+    },
+    {
+        "id": "tsuyoi",
+        "type": "i",
+        "kanji": "強い",
+        "furigana": "つよ",
+        "hiragana": "つよい",
+        "romaji": "tsuyoi",
+        "eng": "strong"
+    },
+    {
+        "id": "yowai",
+        "type": "i",
+        "kanji": "弱い",
+        "furigana": "よわ",
+        "hiragana": "よわい",
+        "romaji": "yowai",
+        "eng": "weak"
     }
 ]
