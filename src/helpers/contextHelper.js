@@ -3,7 +3,7 @@ import { DefaultTypeOptions } from "../enums/typeOption";
 import { DefaultViewOption } from "../enums/viewOptions";
 const DefaultQuizQuestionTime = 3
 const DefaultQuizAnswerTime = 3
-const DefaultQuizItemsCount = 5
+const DefaultQuizItemsCount = 10
 
 const SETTINGS_STORAGE_KEY = "j-adjectives-settings"
 

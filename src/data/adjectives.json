@@ -104,12 +104,12 @@
         "eng": "happy"
     },
     {
-        "id": "fukou",
-        "type": "na",
-        "kanji": "不幸",
-        "furigana": "ふ|こう",
-        "hiragana": "ふこう",
-        "romaji": "fukou",
+        "id": "kanashii",
+        "type": "i",
+        "kanji": "悲しい",
+        "furigana": "かな",
+        "hiragana": "かなしい",
+        "romaji": "kanashii",
         "eng": "sad"
     },
     {
