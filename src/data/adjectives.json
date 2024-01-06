@@ -61,22 +61,6 @@
         "eng": "thin"
     },
     {
-        "id": "ippai",
-        "type": "i",
-        "hiragana": "いっぱい",
-        "romaji": "ippai",
-        "eng": "full"
-    },
-    {
-        "id": "karano",
-        "type": "i",
-        "kanji": "空の",
-        "furigana": "から",
-        "hiragana": "からの",
-        "romaji": "karano",
-        "eng": "empty"
-    },
-    {
         "id": "atsui",
         "type": "i",
         "kanji": "暑い",
@@ -93,6 +77,24 @@
         "hiragana": "さむい",
         "romaji": "samui",
         "eng": "cold"
+    },
+    {
+        "id": "atsui1",
+        "type": "i",
+        "kanji": "熱い",
+        "furigana": "あつ",
+        "hiragana": "あつい",
+        "romaji": "atsui",
+        "eng": "hot (to the touch)"
+    },
+    {
+        "id": "tsumetai",
+        "type": "i",
+        "kanji": "冷たい",
+        "furigana": "つめ",
+        "hiragana": "つめたい",
+        "romaji": "tsumetai",
+        "eng": "cold (to the touch)"
     },
     {
         "id": "shiawase",
