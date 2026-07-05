@@ -20,6 +20,8 @@
     {
         "id": "yasashii",
         "type": "i",
+        "kanji": "易しい",
+        "furigana": "やさ",
         "hiragana": "やさしい",
         "romaji": "yasashii",
         "eng": "easy"
@@ -46,7 +48,7 @@
         "id": "futoi",
         "type": "i",
         "kanji": "太い",
-        "furigana": "ふとい",
+        "furigana": "ふと",
         "hiragana": "ふとい",
         "romaji": "futoi",
         "eng": "fat"
@@ -124,12 +126,12 @@
         "eng": "new"
     },
     {
-        "id": "frui",
+        "id": "furui",
         "type": "i",
         "kanji": "古い",
         "furigana": "ふる",
         "hiragana": "ふるい",
-        "romaji": "frui",
+        "romaji": "furui",
         "eng": "old"
     },
     {
@@ -217,7 +219,7 @@
         "id": "asai",
         "type": "i",
         "kanji": "浅い",
-        "furigana": "あさい",
+        "furigana": "あさ",
         "hiragana": "あさい",
         "romaji": "asai",
         "eng": "shallow"
